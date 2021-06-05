@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite preserve-order="true" name="Annotations Suite" > <!--parallel="tests" thread-count="2" -->
+    <listeners>
+        <listener class-name="io.raveerocks.TestListener"></listener>
+    </listeners>
+    <parameter name="suite" value="Annotations Suite" />
+    <test name="Annotations Test 1">
+        <parameter name="test" value="Annotations Test 1"></parameter>
+        <classes>
+            <class name="io.raveerocks.annotations.AnnotationsTest"/>
+            <class name="io.raveerocks.annotations.AnnotationsTestCopy"/>
+        </classes>
+    </test>
+    <test name="Annotations Test 2">
+        <parameter name="test" value="Annotations Test 2"></parameter>
+        <classes>
+            <class name="io.raveerocks.annotations.AnnotationsTest"/>
+            <class name="io.raveerocks.annotations.AnnotationsTestCopy"/>
+        </classes>
+    </test>
+    <test name="Annotations Test 3">
+        <parameter name="test" value="Annotations Test 3"></parameter>
+        <classes>
+            <class name="io.raveerocks.annotations.AnnotationsTest"/>
+            <class name="io.raveerocks.annotations.AnnotationsTestCopy"/>
+        </classes>
+    </test>
+    <test name="Only Smoke Test">
+        <parameter name="test" value="Only Smoke Test"></parameter>
+        <groups>
+            <run>
+                <include name="smoke"/>
+                <exclude name="sanity"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="io.raveerocks.annotations.AnnotationsTest"/>
+            <class name="io.raveerocks.annotations.AnnotationsTestCopy"/>
+        </classes>
+    </test>
+    <test name="Only Sanity Test">
+        <parameter name="test" value="Only Sanity Test"></parameter>
+        <groups>
+            <run>
+                <include name="sanity"/>
+                <exclude name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="io.raveerocks.annotations.AnnotationsTest"/>
+            <class name="io.raveerocks.annotations.AnnotationsTestCopy"/>
+        </classes>
+    </test>
+    <test name="Any Smoke Test">
+        <parameter name="test" value="Any Smoke Test"></parameter>
+        <groups>
+            <run>
+                <include name="smoke"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="io.raveerocks.annotations.AnnotationsTest"/>
+            <class name="io.raveerocks.annotations.AnnotationsTestCopy"/>
+        </classes>
+    </test>
+    <test name="Any Sanity Test">
+        <parameter name="test" value="Any Sanity Test"></parameter>
+        <groups>
+            <run>
+                <include name="sanity"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="io.raveerocks.annotations.AnnotationsTest"/>
+            <class name="io.raveerocks.annotations.AnnotationsTestCopy"/>
+        </classes>
+    </test>
+    <test name="Dependency Test">
+        <parameter name="test" value="Dependency Test"></parameter>
+        <classes>
+            <class name="io.raveerocks.annotations.AnnotationsTest">
+                <methods>
+                    <include name="adependent"/>
+                    <include name="zdependency"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

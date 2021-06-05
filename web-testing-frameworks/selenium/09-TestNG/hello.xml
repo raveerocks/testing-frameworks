@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Hello Suite">
+    <test verbose="2" preserve-order="true" name="hello1">
+        <classes>
+            <class name="io.raveerocks.HelloWorldTest">
+                <methods>
+                    <include name="testHello1"/>
+                    <include name="testHello2"/>
+                    <include name="testHello3"/>
+                    <include name="testHello4"/>
+                    <include name="testHello5"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test verbose="2" preserve-order="true" name="hello2">
+        <classes>
+            <class name="io.raveerocks.HelloWorldTest">
+                <methods>
+                    <include name="hello6"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>

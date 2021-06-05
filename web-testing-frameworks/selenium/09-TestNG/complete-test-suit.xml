@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Complete Test Suite">
+    <parameter name="suite" value="Complete Test Suite" />
+    <test name="Hello">
+        <parameter name="suite" value="Hello Test" />
+        <classes>
+            <class name="io.raveerocks.HelloWorldTest"/>
+        </classes>
+    </test>
+    <test name="Arithmetic">
+        <parameter name="suite" value="Arithmetic Test" />
+        <classes>
+            <class name="io.raveerocks.IntegerArithmeticTest"/>
+            <class name="io.raveerocks.LongArithmeticTest"/>
+        </classes>
+    </test>
+    <test name="Annotations">
+        <parameter name="suite" value="Annotations Test" />
+        <classes>
+            <class name="io.raveerocks.annotations.AnnotationsTest"/>
+            <class name="io.raveerocks.annotations.AnnotationsTestCopy"/>
+        </classes>
+    </test>
+</suite>
